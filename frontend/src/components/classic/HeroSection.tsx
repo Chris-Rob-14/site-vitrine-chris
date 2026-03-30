@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
@@ -32,12 +32,12 @@ export function HeroSection() {
       </p>
 
       <div className="flex gap-4 pt-6">
-        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--drop-shadow-glow-orange)]">
+        <a href="#projects" className={buttonVariants({ size: "lg" }) + " bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--drop-shadow-glow-orange)]"}>
           Découvrir mes projets
-        </Button>
-        <Button size="lg" variant="outline" className="border-border hover:bg-muted text-foreground">
+        </a>
+        <a href="#contact" className={buttonVariants({ size: "lg", variant: "outline" }) + " border-border hover:bg-muted text-foreground"}>
           Me contacter
-        </Button>
+        </a>
       </div>
     </section>
   );

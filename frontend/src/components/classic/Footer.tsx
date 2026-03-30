@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 
 export function Footer() {
@@ -13,7 +13,7 @@ export function Footer() {
         
         <div className="flex items-center gap-4">
           <a 
-            href="https://linkedin.com/in/christopher-robine" 
+            href="https://www.linkedin.com/in/christopher-robine-767981134/" 
             target="_blank" 
             rel="noreferrer" 
             aria-label="LinkedIn"
@@ -23,30 +23,11 @@ export function Footer() {
           </a>
           
           <a 
-            href="https://github.com/christopher-robine" 
-            target="_blank" 
-            rel="noreferrer" 
-            aria-label="GitHub"
-            className={buttonVariants({ variant: "ghost", size: "icon" }) + " hover:text-secondary hover:bg-secondary/10 transition-colors"}
-          >
-            <Github className="h-5 w-5" />
-          </a>
-          
-          <a 
             href="mailto:christopher.robine@gmail.com" 
             aria-label="Email"
             className={buttonVariants({ variant: "ghost", size: "icon" }) + " hover:text-primary hover:bg-primary/10 transition-colors"}
           >
             <Mail className="h-5 w-5" />
-          </a>
-          
-          <a 
-            href="/CV_Christopher_Robine.pdf" 
-            download
-            className={buttonVariants({ variant: "outline" }) + " ml-4 border-primary/50 text-foreground hover:bg-primary/10 hover:text-primary transition-colors"}
-          >
-            <FileText className="h-4 w-4 mr-2" />
-            Télécharger CV
           </a>
         </div>
       </div>

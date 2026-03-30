@@ -3,7 +3,7 @@ import { ArrowRight, Calendar, Sparkles } from "lucide-react";
 
 export function CtaSection() {
   return (
-    <section className="py-24 border-t border-border/40 relative overflow-hidden">
+    <section id="contact" className="py-24 border-t border-border/40 relative overflow-hidden">
       {/* Background glow element */}
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
@@ -51,7 +51,7 @@ export function CtaSection() {
             </a>
             
             <a 
-              href="https://linkedin.com/in/christopher-robine" 
+              href="https://www.linkedin.com/in/christopher-robine-767981134/" 
               target="_blank" 
               rel="noreferrer"
               className={buttonVariants({ size: "lg", variant: "outline" }) + " h-14 px-8 text-lg font-bold border-border hover:border-primary/50 hover:bg-primary/10 transition-all text-foreground"}

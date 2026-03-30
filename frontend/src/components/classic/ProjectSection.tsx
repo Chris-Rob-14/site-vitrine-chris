@@ -41,7 +41,7 @@ export function ProjectSection() {
               key={index} 
               className="group relative rounded-2xl border border-border bg-card hover:border-primary/50 overflow-hidden transition-all hover:translate-y-[-4px] hover:shadow-[0_8px_30px_rgba(255,94,0,0.15)] cursor-pointer flex flex-col"
             >
-              <div className="relative h-48 w-full overflow-hidden border-b border-border/50">
+              <div className="relative h-48 w-full overflow-hidden -mb-[1px] z-10">
                 <Image 
                   src={project.image} 
                   alt={project.title} 
