@@ -1,0 +1,92 @@
+services:
+  mysql:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "${MYSQL_PORT:-3314}:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      PMA_HOST: mysql
+    ports:
+      - "${PMA_PORT}:80"
+
+  backend:
+    user: "${UID:-1000}:${GID:-1000}"
+    build:
+      context: .
+      dockerfile: infra/php/Dockerfile
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      APP_ENV: dev
+      DATABASE_URL: "mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@mysql:3306/${MYSQL_DATABASE}?serverVersion=8.0&charset=utf8mb4"
+    volumes:
+      - ./backend:/var/www/html
+    working_dir: /var/www/html
+    ports:
+      - "${BACK_PORT}:8000"
+    command: sh -lc "composer install && php -S 0.0.0.0:8000 -t public"
+
+  # Service dédié au scaffold (pas de volumes node_modules/.next)
+  frontend_scaffold:
+    user: "${UID:-1000}:${GID:-1000}"
+    build:
+      context: .
+      dockerfile: infra/next/Dockerfile
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    entrypoint: sh
+
+  frontend:
+    user: "${UID:-1000}:${GID:-1000}"
+    build:
+      context: .
+      dockerfile: infra/next/Dockerfile
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_API_URL: "http://localhost:${BACK_PORT}"
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    ports:
+      - "${FRONT_PORT}:3000"
+    command: sh -lc "cd /app && if [ ! -f package.json ]; then echo 'No package.json yet (scaffold first). Container idle...'; tail -f /dev/null; else npm install && npm run dev -- --hostname 0.0.0.0 --port 3000; fi"
+
+  redis:
+    image: redis:7-alpine
+    profiles: ["devtools"]
+    ports:
+      - "6379:6379"
+
+  mailpit:
+    image: axllent/mailpit:latest
+    profiles: ["devtools"]
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
+volumes:
+  mysql_data:

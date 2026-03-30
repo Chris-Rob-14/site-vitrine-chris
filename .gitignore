@@ -1,0 +1,35 @@
+# ===== env / secrets =====
+.env
+.env.*
+!.env.example
+
+# ===== OS / IDE =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== logs =====
+*.log
+
+# ===== Symfony (backend) =====
+/backend/var/
+/backend/vendor/
+/backend/public/bundles/
+/backend/.phpunit.cache/
+/backend/phpunit.xml
+
+# ===== Next (frontend) =====
+/frontend/.next/
+/frontend/out/
+/frontend/node_modules/
+/frontend/.turbo/
+/frontend/.vercel/
+/frontend/.storybook-static/
+
+# ===== Playwright =====
+/frontend/test-results/
+/frontend/playwright-report/
+
+# ===== cache divers =====
+**/.cache/
