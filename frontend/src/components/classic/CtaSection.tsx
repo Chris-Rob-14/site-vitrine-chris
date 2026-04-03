@@ -12,11 +12,11 @@ export function CtaSection() {
         {/* Key Metrics / KPIs */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
-            <p className="text-4xl font-black text-primary mb-2">+5</p>
+            <p className="text-4xl font-black text-primary mb-2">4</p>
             <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Ans d'expérience</p>
           </div>
           <div className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
-            <p className="text-4xl font-black text-secondary mb-2">+15</p>
+            <p className="text-4xl font-black text-secondary mb-2">10</p>
             <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Projets Livrés</p>
           </div>
           <div className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">

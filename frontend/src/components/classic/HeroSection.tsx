@@ -14,28 +14,70 @@ export function HeroSection() {
 
       <div className="space-y-4 max-w-3xl">
         <h1 className="text-5xl md:text-7xl font-sans font-bold tracking-tighter">
-          Christopher <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_rgba(255,94,0,0.4)]">Robine</span>
+          Christopher{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_rgba(255,94,0,0.4)]">
+            Robine
+          </span>
         </h1>
         <h2 className="text-2xl md:text-3xl font-sans font-medium text-foreground/80">
-          Chef de Projet Technique | Product Engineer
+          Chef de Projet Technique | Developpeur Full Stack | Product Engineer
         </h2>
         <div className="flex flex-wrap justify-center gap-2 pt-4">
-          <Badge variant="outline" className="border-primary/50 text-foreground bg-background hover:bg-primary/10 transition-colors">Architecture applicative</Badge>
-          <Badge variant="outline" className="border-primary/50 text-foreground bg-background hover:bg-primary/10 transition-colors">Pilotage technique</Badge>
-          <Badge variant="outline" className="border-secondary/50 text-foreground bg-background hover:bg-secondary/10 transition-colors">Modernisation d'applications</Badge>
+          <Badge
+            variant="outline"
+            className="border-primary/50 text-foreground bg-background hover:bg-primary/10 transition-colors"
+          >
+            Architecture applicative
+          </Badge>
+          <Badge
+            variant="outline"
+            className="border-primary/50 text-foreground bg-background hover:bg-primary/10 transition-colors"
+          >
+            Pilotage technique
+          </Badge>
+          <Badge
+            variant="outline"
+            className="border-secondary/50 text-foreground bg-background hover:bg-secondary/10 transition-colors"
+          >
+            Modernisation d&apos;applications
+          </Badge>
         </div>
       </div>
 
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-4">
-        Ingénieur applicatif orienté produit spécialisé dans la conception et la modernisation d'applications métiers. 
-        Profil hybride combinant développement full stack, architecture applicative et pilotage technique de projets.
+        Developpeur Full Stack oriente produit, specialise dans la conception, la modernisation et
+        le cadrage technique d&apos;applications metier. Profil hybride combinant developpement,
+        chiffrage, priorisation et pilotage de projets.
       </p>
 
       <div className="flex gap-4 pt-6">
-        <a href="#projects" className={buttonVariants({ size: "lg" }) + " bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--drop-shadow-glow-orange)]"}>
-          Découvrir mes projets
+        <a
+          href="#projects"
+          className={
+            buttonVariants({ size: "lg" }) +
+            " bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--drop-shadow-glow-orange)]"
+          }
+        >
+          Decouvrir mes projets
         </a>
-        <a href="#contact" className={buttonVariants({ size: "lg", variant: "outline" }) + " border-border hover:bg-muted text-foreground"}>
+        <a
+          href="/cv-christopher-robine.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className={
+            buttonVariants({ size: "lg", variant: "outline" }) +
+            " border-primary/30 hover:bg-primary/10 text-foreground"
+          }
+        >
+          Telecharger mon CV
+        </a>
+        <a
+          href="#contact"
+          className={
+            buttonVariants({ size: "lg", variant: "outline" }) +
+            " border-border hover:bg-muted text-foreground"
+          }
+        >
           Me contacter
         </a>
       </div>
