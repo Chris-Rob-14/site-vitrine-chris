@@ -5,6 +5,7 @@ import { WorkApproachSection } from "./WorkApproachSection";
 import { ExperienceSection } from "./ExperienceSection";
 import { SkillsSection } from "./SkillsSection";
 import { ProjectSection } from "./ProjectSection";
+import { ThinkingCardsSection } from "./ThinkingCardsSection";
 import { CtaSection } from "./CtaSection";
 import { Footer } from "./Footer";
 
@@ -19,6 +20,7 @@ export function ClassicView() {
         <ExperienceSection />
         <SkillsSection />
         <ProjectSection />
+        <ThinkingCardsSection />
       </main>
       <CtaSection />
       <Footer />

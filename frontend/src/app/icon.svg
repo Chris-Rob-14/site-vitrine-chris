@@ -1,21 +1,31 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="18" fill="#121212"/>
-  <rect x="4" y="4" width="56" height="56" rx="14" stroke="url(#paint0_linear)" stroke-width="2"/>
-  <path d="M20 19H34.5C40.299 19 45 23.701 45 29.5C45 35.299 40.299 40 34.5 40H27V49H20V19Z" fill="#F7F4EF"/>
-  <path d="M31 26H34C35.933 26 37.5 27.567 37.5 29.5C37.5 31.433 35.933 33 34 33H31V26Z" fill="url(#paint1_linear)"/>
-  <path d="M28 45L41 19H48L35 45H28Z" fill="url(#paint2_linear)"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Christopher Robine favicon</title>
+  <desc id="desc">Monogramme CR entre crochets avec dégradé violet et orange.</desc>
+
   <defs>
-    <linearGradient id="paint0_linear" x1="9" y1="10" x2="55" y2="54" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF5E00"/>
-      <stop offset="1" stop-color="#FFB703"/>
+    <linearGradient id="cr-gradient" x1="72" y1="80" x2="440" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset="0.5" stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#F97316"/>
     </linearGradient>
-    <linearGradient id="paint1_linear" x1="31" y1="26" x2="39.5" y2="33" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF5E00"/>
-      <stop offset="1" stop-color="#FFB703"/>
-    </linearGradient>
-    <linearGradient id="paint2_linear" x1="28" y1="19" x2="48" y2="45" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFB703"/>
-      <stop offset="1" stop-color="#FF5E00"/>
-    </linearGradient>
+
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
   </defs>
+
+  <rect x="38" y="38" width="436" height="436" rx="112" fill="#0F172A" filter="url(#soft-shadow)"/>
+  <rect x="51" y="51" width="410" height="410" rx="100" stroke="url(#cr-gradient)" stroke-width="18"/>
+
+  <path d="M151 151H101V361H151" stroke="#7C3AED" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M361 151H411V361H361" stroke="#F97316" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="256" y="294"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="Inter, Montserrat, Arial, sans-serif"
+        font-size="138"
+        font-weight="800"
+        letter-spacing="-8"
+        fill="url(#cr-gradient)">CR</text>
 </svg>

@@ -7,35 +7,35 @@ export function ProjectSection() {
       tags: ["Symfony", "PHP", "AngularJS", "Next.js"],
       description:
         "Refonte progressive d'un patrimoine d'environ 25 outils intranet front et back. Migration du back PHP vers Symfony, modernisation du front JavaScript et AngularJS avec cible Next.js, mise en place de conventions de code, de tests unitaires cote back et d'un decoupage plus propre des composants cote front. J'ai contribue directement a une douzaine d'outils dans une logique de maintenabilite, de reduction de dette technique et de preparation des futures evolutions.",
-      image: "/projects/project_fraud_tools_1773668141000.png",
+      image: "/projects/project-fraude.jpeg",
     },
     {
       title: "Migration du portail frontend",
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Storybook"],
       description:
         "Migration vers une stack frontend moderne basee sur Next.js, TypeScript, Tailwind, shadcn/ui et Storybook. L'architecture a ete revue pour durer, faciliter la scalabilite des futurs projets et favoriser la reutilisation des composants. Le travail a egalement integre les enjeux d'accessibilite avec une prise en charge des themes light, dark et high contrast.",
-      image: "/projects/project_nextjs_migration_1773668158007.png",
+      image: "/projects/project-migration-front.png",
     },
     {
       title: "Conformite RGPD & Gouvernance des donnees",
       tags: ["Data", "RGPD", "LPM", "NIS2", "DORA"],
       description:
         "Analyse et identification des donnees soumises au RGPD, definition de strategies d'anonymisation et de purge, et mise en place d'un referentiel de controle de saisie libre. Ce travail s'inscrivait dans un contexte bancaire fortement contraint sur le plan securitaire, avec prise en compte des exigences liees a la LPM, a NIS2 et a DORA. J'ai aussi contribue a la preparation de comites et de documents d'evaluation comme les ARM (Analyse Risque Metier) afin d'apprecier la cotation risque des outils.",
-      image: "/projects/project_gdpr_data_1773668173711.png",
+      image: "/projects/project-rgpd-gouvernance.jpg",
     },
     {
       title: "Site vitrine institutionnel",
       tags: ["Coordination", "Debian", "Reverse Proxy", "Matomo"],
       description:
         "Pilotage transverse entre le marketing interne et le prestataire en charge du developpement, avec accompagnement sur les choix UI/UX avant livraison. J'ai assure la revue des livraisons du prestataire, la relation avec l'hebergeur pour la mise a disposition de la VM et l'ouverture des flux, ainsi que la coordination avec le support IT groupe pour les DNS. Cote serveur, j'ai pris en charge le parametrage de la VM, le deploiement, le reverse proxy, Fail2Ban, Git et Matomo jusqu'a la mise en production.",
-      image: "/projects/project_debian_server_1773668194190.png",
+      image: "/projects/project-site-vitrine.jpg",
     },
     {
       title: "Structuration du chiffrage et de la priorisation",
       tags: ["Gestion de projet", "Chiffrage", "Roadmap", "Excel"],
       description:
         "Mise en place d'une methode de chiffrage et d'outils de pilotage pour decouper les user stories, estimer les charges et construire une feuille de route exploitable par les responsables. Le travail reposait notamment sur des supports Excel permettant d'eclairer les arbitrages en CODIR et de rendre visibles les priorisations a retenir en fonction de la valeur, de l'effort et du contexte metier.",
-      image: "/projects/project_nextjs_migration_1773668158007.png",
+      image: "/projects/project-gestion-projet.jpg",
     },
   ];
 
