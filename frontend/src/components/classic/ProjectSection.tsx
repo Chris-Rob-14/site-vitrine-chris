@@ -3,39 +3,39 @@ import Image from "next/image";
 export function ProjectSection() {
   const projects = [
     {
-      title: "Refonte d'outils de gestion fraude",
-      tags: ["Symfony", "PHP", "AngularJS", "Next.js"],
+      title: "Structuration du chiffrage et de la priorisation",
+      tags: ["Gestion de projet", "Chiffrage", "Roadmap", "Excel"],
       description:
-        "Refonte progressive d'un patrimoine d'environ 25 outils intranet front et back. Migration du back PHP vers Symfony, modernisation du front JavaScript et AngularJS avec cible Next.js, mise en place de conventions de code, de tests unitaires cote back et d'un decoupage plus propre des composants cote front. J'ai contribue directement a une douzaine d'outils dans une logique de maintenabilite, de reduction de dette technique et de preparation des futures evolutions.",
-      image: "/projects/project-fraude.jpeg",
-    },
-    {
-      title: "Migration du portail frontend",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Storybook"],
-      description:
-        "Migration vers une stack frontend moderne basee sur Next.js, TypeScript, Tailwind, shadcn/ui et Storybook. L'architecture a ete revue pour durer, faciliter la scalabilite des futurs projets et favoriser la reutilisation des composants. Le travail a egalement integre les enjeux d'accessibilite avec une prise en charge des themes light, dark et high contrast.",
-      image: "/projects/project-migration-front.png",
+        "Mise en place d'une methode de chiffrage et d'outils de pilotage pour decouper les user stories, estimer les charges et construire une feuille de route exploitable par les responsables. Le travail reposait sur des supports concrets permettant d'eclairer les arbitrages en CODIR et de rendre visibles les priorisations a retenir en fonction de la valeur, de l'effort et du contexte metier.",
+      image: "/projects/project-gestion-projet.jpg",
     },
     {
       title: "Conformite RGPD & Gouvernance des donnees",
-      tags: ["Data", "RGPD", "LPM", "NIS2", "DORA"],
+      tags: ["Analyse", "RGPD", "LPM", "NIS2", "DORA"],
       description:
-        "Analyse et identification des donnees soumises au RGPD, definition de strategies d'anonymisation et de purge, et mise en place d'un referentiel de controle de saisie libre. Ce travail s'inscrivait dans un contexte bancaire fortement contraint sur le plan securitaire, avec prise en compte des exigences liees a la LPM, a NIS2 et a DORA. J'ai aussi contribue a la preparation de comites et de documents d'evaluation comme les ARM (Analyse Risque Metier) afin d'apprecier la cotation risque des outils.",
+        "Analyse et identification des donnees soumises au RGPD, definition de strategies d'anonymisation et de purge, et mise en place d'un referentiel de controle de saisie libre. Ce travail s'inscrivait dans un contexte bancaire fortement contraint, avec preparation de comites et de documents d'evaluation comme les ARM pour apprecier la cotation risque des outils.",
       image: "/projects/project-rgpd-gouvernance.jpg",
     },
     {
       title: "Site vitrine institutionnel",
-      tags: ["Coordination", "Debian", "Reverse Proxy", "Matomo"],
+      tags: ["Coordination", "Analyse", "Debian", "Matomo"],
       description:
-        "Pilotage transverse entre le marketing interne et le prestataire en charge du developpement, avec accompagnement sur les choix UI/UX avant livraison. J'ai assure la revue des livraisons du prestataire, la relation avec l'hebergeur pour la mise a disposition de la VM et l'ouverture des flux, ainsi que la coordination avec le support IT groupe pour les DNS. Cote serveur, j'ai pris en charge le parametrage de la VM, le deploiement, le reverse proxy, Fail2Ban, Git et Matomo jusqu'a la mise en production.",
+        "Pilotage transverse entre le marketing interne, le prestataire de developpement, l'hebergeur et le support IT groupe. J'y ai accompagne les choix UI/UX, assure la revue des livraisons, coordonne les sujets DNS et flux reseau, puis pris en charge le parametrage serveur, le deploiement, le reverse proxy, Fail2Ban, Git et Matomo jusqu'a la mise en production.",
       image: "/projects/project-site-vitrine.jpg",
     },
     {
-      title: "Structuration du chiffrage et de la priorisation",
-      tags: ["Gestion de projet", "Chiffrage", "Roadmap", "Excel"],
+      title: "Refonte d'outils de gestion fraude",
+      tags: ["Analyse", "Symfony", "PHP", "AngularJS"],
       description:
-        "Mise en place d'une methode de chiffrage et d'outils de pilotage pour decouper les user stories, estimer les charges et construire une feuille de route exploitable par les responsables. Le travail reposait notamment sur des supports Excel permettant d'eclairer les arbitrages en CODIR et de rendre visibles les priorisations a retenir en fonction de la valeur, de l'effort et du contexte metier.",
-      image: "/projects/project-gestion-projet.jpg",
+        "Refonte progressive d'un patrimoine d'environ 25 outils intranet front et back. Au-dela du developpement, le sujet demandait de comprendre les usages, de reprendre les regles metier, d'identifier les points de fragilite et de faire evoluer les outils dans une logique de maintenabilite, de reduction de dette technique et de preparation des futures evolutions.",
+      image: "/projects/project-fraude.jpeg",
+    },
+    {
+      title: "Migration du portail frontend",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Storybook"],
+      description:
+        "Migration vers une stack frontend moderne basee sur Next.js, TypeScript, Tailwind, shadcn/ui et Storybook. L'architecture a ete revue pour durer, favoriser la reutilisation des composants et soutenir les futurs projets, avec une prise en compte de l'accessibilite via les themes light, dark et high contrast.",
+      image: "/projects/project-migration-front.png",
     },
   ];
 

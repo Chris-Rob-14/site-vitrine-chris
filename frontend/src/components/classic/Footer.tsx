@@ -8,10 +8,10 @@ export function Footer() {
         <div className="text-center md:text-left">
           <p className="font-bold text-lg tracking-tight">Christopher Robine</p>
           <p className="text-sm text-muted-foreground">
-            Chef de Projet Technique | Developpeur Full Stack | Product Engineer
+            Analyste fonctionnel | Developpeur Full Stack
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            © {new Date().getFullYear()} Christopher Robine. All rights reserved.
+            Copyright {new Date().getFullYear()} Christopher Robine. All rights reserved.
           </p>
         </div>
 

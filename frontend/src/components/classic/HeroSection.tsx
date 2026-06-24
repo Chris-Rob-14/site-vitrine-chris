@@ -4,14 +4,6 @@ import { buttonVariants } from "@/components/ui/button";
 export function HeroSection() {
   return (
     <section className="py-20 md:py-32 flex flex-col items-center text-center space-y-8" id="hero">
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-        </span>
-        Disponible pour de nouvelles missions
-      </div>
-
       <div className="space-y-4 max-w-3xl">
         <h1 className="text-5xl md:text-7xl font-sans font-bold tracking-tighter">
           Christopher{" "}
@@ -20,20 +12,20 @@ export function HeroSection() {
           </span>
         </h1>
         <h2 className="text-2xl md:text-3xl font-sans font-medium text-foreground/80">
-          Chef de Projet Technique | Developpeur Full Stack | Product Engineer
+          Analyste fonctionnel | Developpeur Full Stack
         </h2>
         <div className="flex flex-wrap justify-center gap-2 pt-4">
           <Badge
             variant="outline"
             className="border-primary/50 text-foreground bg-background hover:bg-primary/10 transition-colors"
           >
-            Architecture applicative
+            Analyse fonctionnelle
           </Badge>
           <Badge
             variant="outline"
             className="border-primary/50 text-foreground bg-background hover:bg-primary/10 transition-colors"
           >
-            Pilotage technique
+            Cadrage & priorisation
           </Badge>
           <Badge
             variant="outline"
@@ -45,9 +37,9 @@ export function HeroSection() {
       </div>
 
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-4">
-        Developpeur Full Stack oriente produit, specialise dans la conception, la modernisation et
-        le cadrage technique d&apos;applications metier. Profil hybride combinant developpement,
-        chiffrage, priorisation et pilotage de projets.
+        J&apos;aide a comprendre un besoin, le cadrer, le chiffrer et le transformer en solution
+        exploitable. Mon approche combine analyse fonctionnelle, structuration des priorites et
+        developpement full stack pour faire avancer les projets de facon concrete.
       </p>
 
       <div className="flex gap-4 pt-6">

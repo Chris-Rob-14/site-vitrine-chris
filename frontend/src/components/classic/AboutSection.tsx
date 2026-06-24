@@ -10,40 +10,40 @@ export function AboutSection() {
 
         <div className="p-8 rounded-2xl border border-border bg-card/60 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Je suis un{" "}
+            Je me positionne avant tout comme un{" "}
             <strong className="text-foreground font-semibold">
-              Developpeur Full Stack oriente produit
+              analyste fonctionnel avec un socle de developpement full stack
             </strong>
-            , avec une appetence forte pour le cadrage technique, la fiabilite des solutions et la
-            lisibilite des systemes dans le temps.
+            . Ce qui m&apos;interesse d&apos;abord, c&apos;est de comprendre le besoin, de clarifier le probleme
+            a resoudre et de construire une reponse utile, lisible et actionnable.
           </p>
           <p>
-            Au quotidien, je travaille autant sur le code que sur la structuration des besoins :
-            chiffrage, decoupage, choix techniques, anticipation des cas limites, gestion des erreurs
-            et reflexion sur la scalabilite. Mon objectif est de proposer des solutions utiles,
-            robustes et maintenables, en gardant toujours en tete les contraintes metier.
+            Au quotidien, je travaille sur le recueil du besoin, le chiffrage, le decoupage en lots,
+            la priorisation, l&apos;identification des risques et la coordination des acteurs, puis je
+            mobilise le developpement quand il permet de concretiser la bonne solution. Mon objectif
+            est d&apos;aider a prendre de meilleures decisions avant, pendant et apres l&apos;execution.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 mt-6 border-t border-border/50">
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-foreground">Vision produit</h3>
+              <h3 className="text-xl font-bold text-foreground">Analyse fonctionnelle</h3>
               <p className="text-sm">
-                Comprendre le besoin metier pour concevoir des solutions utiles, pragmatiques et
-                rapidement confrontables au terrain.
+                Comprendre le besoin metier, poser le bon cadre et transformer une demande floue en
+                sujet exploitable.
               </p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-foreground">Conception technique</h3>
+              <h3 className="text-xl font-bold text-foreground">Structuration</h3>
               <p className="text-sm">
-                Reflechir a la structure du code, aux donnees, aux cas limites et a la maintenabilite
-                sans perdre de vue le contexte reel du projet.
+                Decouper, chiffrer, prioriser et faire apparaitre les dependances, les risques et les
+                arbitrages utiles.
               </p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-foreground">Pilotage</h3>
+              <h3 className="text-xl font-bold text-foreground">Execution technique</h3>
               <p className="text-sm">
-                Aider au decoupage, au chiffrage, a la priorisation et a la securisation des
-                livraisons pour faire avancer le projet de facon fiable.
+                Concevoir et mettre en oeuvre des solutions robustes quand la technique est le bon
+                levier pour faire avancer le projet.
               </p>
             </div>
           </div>

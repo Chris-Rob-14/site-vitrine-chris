@@ -1,19 +1,19 @@
 export function WorkApproachSection() {
   const pillars = [
     {
-      title: "Livrer pour apprendre",
+      title: "Comprendre avant de construire",
       description:
-        "Je privilegie des livrables concrets et testables rapidement sur le terrain afin de confronter les idees a l'usage reel. Selon le contexte, le code est avant tout un moyen de valider une hypothese metier, d'obtenir des retours utiles et d'eviter d'investir trop tot dans une complexite inutile.",
+        "Je commence par clarifier le besoin, les usages attendus, les zones de flou et les contraintes du terrain. Mon objectif n'est pas de produire vite pour produire vite, mais d'eviter de lancer une solution mal cadree ou mal comprise.",
     },
     {
-      title: "Structurer pour prioriser",
+      title: "Structurer pour arbitrer",
       description:
-        "J'aide a clarifier le besoin a partir de composants, de cas d'usage et de lots fonctionnels pour aider le demandeur a se projeter. Je traduis ensuite cela en user stories, chiffrage, regroupement par lots, chemin critique et mise en evidence des zones les plus risquées afin d'eclairer les arbitrages.",
+        "Je traduis le besoin en lots, user stories, hypotheses et niveaux de priorite afin d'aider a la decision. Chiffrage, chemin critique, MoSCoW, RACI ou support de pilotage ne sont pour moi que des moyens de rendre les arbitrages plus lisibles.",
     },
     {
-      title: "Coordonner pour securiser",
+      title: "Executer de facon pragmatique",
       description:
-        "J'utilise des cadres simples et utiles comme MoSCoW, RACI, Gantt, Trello ou Jira pour rendre visibles les responsabilites, les dependances et les priorites. J'integre egalement les outils IA et des notions low-code / no-code comme leviers complementaires pour accelerer l'execution quand ils ont du sens.",
+        "Une fois le cadre pose, je mobilise le bon levier : developpement sur mesure, automatisation, low-code ou outillage. L'idee est de livrer une solution testable et utile, sans surinvestir trop tot dans une complexite qui n'est pas encore necessaire.",
     },
   ];
 
@@ -27,8 +27,8 @@ export function WorkApproachSection() {
             Ma facon de <span className="text-secondary">travailler</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
-            J'essaie de garder un equilibre simple : aller vite quand il faut apprendre, structurer
-            quand il faut arbitrer, et securiser quand il faut livrer dans la duree.
+            Ma demarche repose sur trois temps simples : comprendre, structurer, puis executer avec
+            le bon niveau de profondeur.
           </p>
         </div>
 

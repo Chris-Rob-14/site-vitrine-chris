@@ -11,16 +11,16 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Christopher Robine | Product Engineer",
+    default: "Christopher Robine | Analyste fonctionnel & Developpeur Full Stack",
     template: "%s | Christopher Robine",
   },
   description:
-    "Portfolio de Christopher Robine, Product Engineer et chef de projet technique specialise dans la modernisation d'applications, l'architecture et le pilotage de projets digitaux.",
+    "Portfolio de Christopher Robine, analyste fonctionnel et developpeur full stack, specialise dans la modernisation d'applications, le cadrage fonctionnel et le pilotage de projets digitaux.",
   applicationName: "Site vitrine Christopher Robine",
   keywords: [
     "Christopher Robine",
-    "Product Engineer",
-    "Chef de projet technique",
+    "Analyste fonctionnel",
+    "Developpeur Full Stack",
     "Portfolio",
     "Architecture applicative",
     "Next.js",
@@ -33,17 +33,17 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Christopher Robine | Product Engineer",
+    title: "Christopher Robine | Analyste fonctionnel & Developpeur Full Stack",
     description:
-      "Decouvrez le parcours, les projets et les expertises de Christopher Robine en architecture applicative, modernisation et delivery produit.",
+      "Decouvrez le parcours, les projets et les expertises de Christopher Robine en analyse fonctionnelle, modernisation applicative et delivery produit.",
     type: "website",
     locale: "fr_FR",
   },
   twitter: {
     card: "summary",
-    title: "Christopher Robine | Product Engineer",
+    title: "Christopher Robine | Analyste fonctionnel & Developpeur Full Stack",
     description:
-      "Portfolio de Christopher Robine, specialise en modernisation d'applications et pilotage technique.",
+      "Portfolio de Christopher Robine, specialise en analyse fonctionnelle, modernisation d'applications et pilotage technique.",
   },
 };
 
@@ -54,9 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body
-        className={`${outfit.variable} font-sans antialiased`}
-      >
+      <body className={`${outfit.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
