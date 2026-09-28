@@ -25,6 +25,8 @@ export const homeFacets = [
   },
   {
     id: "training",
+    href: "/formation",
+    linkLabel: "Explorer cette facette",
     title: "Formation & transmission",
     description: "Préparer la transmission de pratiques en pilotage de projet numérique, Business Analysis, Agile et culture Web, ainsi qu'en automatisation, IA métier et visibilité numérique.",
   },

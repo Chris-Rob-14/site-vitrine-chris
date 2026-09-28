@@ -5,6 +5,7 @@ export interface NavigationItem {
 
 export const navigation: NavigationItem[] = [
   { href: "/projet", label: "Projet & BA" },
+  { href: "/formation", label: "Formation" },
   { href: "#facets", label: "Mes facettes" },
   { href: "#approach", label: "Ma démarche" },
   { href: "#projects", label: "Réalisations" },

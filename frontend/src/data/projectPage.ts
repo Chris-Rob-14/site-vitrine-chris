@@ -55,6 +55,7 @@ export const projectReflection = reflections.find(reflection => reflection.numbe
 export const projectNavigation = [
   { href: "/", label: "Accueil" },
   { href: "/projet", label: "Projet & BA" },
+  { href: "/formation", label: "Formation" },
   { href: "#cycle", label: "Démarche" },
   { href: "#preuves", label: "Contributions" },
   { href: "#contact", label: "Contact" },
