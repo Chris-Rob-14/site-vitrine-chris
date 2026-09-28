@@ -1,5 +1,5 @@
 import { profile } from "@/data/profile";
-import { contact, homepageStats } from "@/data/homepage";
+import { home } from "@/data/homepage";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { ArrowRight, Mail, Sparkles } from "lucide-react";
 
@@ -7,40 +7,22 @@ export function CtaSection() {
   return (
     <section
       id="contact"
+      tabIndex={-1}
       className="py-24 border-t border-border/40 relative overflow-hidden"
     >
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto px-4 text-center space-y-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {homepageStats.map((stat, index) => (
-            <div
-              key={stat.id}
-              className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm"
-            >
-              <p
-                className={`text-4xl font-black mb-2 ${["text-primary", "text-secondary", "text-purple-500", "text-blue-500"][index]}`}
-              >
-                {stat.value}
-              </p>
-              <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
         <div className="max-w-3xl mx-auto space-y-8 p-5 sm:p-10 rounded-3xl border border-primary/20 bg-primary/5 backdrop-blur-md relative">
           <Sparkles className="absolute top-6 left-6 w-6 h-6 text-primary/40 animate-pulse" />
           <Sparkles className="absolute bottom-6 right-6 w-8 h-8 text-secondary/40 animate-pulse delay-700" />
 
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Prêt à{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              collaborer ?
+              {home.ctaTitle}
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">{contact}</p>
+          <p className="text-xl text-muted-foreground">{home.contact}</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
             <a

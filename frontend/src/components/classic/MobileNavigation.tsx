@@ -1,9 +1,10 @@
 "use client";
 import { useRef } from "react";
 import { Menu } from "lucide-react";
-import { navigation } from "@/data/navigation";
+import { navigation, type NavigationItem } from "@/data/navigation";
+import Link from "next/link";
 
-export function MobileNavigation() {
+export function MobileNavigation({ items = navigation, currentHref }: { items?: NavigationItem[]; currentHref?: string }) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const summaryRef = useRef<HTMLElement>(null);
   return (
@@ -28,20 +29,21 @@ export function MobileNavigation() {
         aria-label="Navigation mobile"
         className="absolute inset-x-0 top-full border-b border-border bg-background p-4 shadow-lg"
       >
-        {navigation.map((item) => (
-          <a
+        {items.map((item) => (
+          <Link
             key={item.href}
             href={item.href}
+            aria-current={item.href === currentHref ? "page" : undefined}
             className="flex min-h-11 items-center rounded-lg px-4 hover:bg-muted"
             onClick={() => {
               if (detailsRef.current) detailsRef.current.open = false;
-              document
-                .querySelector<HTMLElement>(item.href)
-                ?.focus({ preventScroll: true });
+              if (item.href.startsWith("#")) {
+                document.querySelector<HTMLElement>(item.href)?.focus({ preventScroll: true });
+              }
             }}
           >
             {item.label}
-          </a>
+          </Link>
         ))}
       </nav>
     </details>

@@ -3,6 +3,7 @@ export function WorkApproachSection() {
   return (
     <section
       id="approach"
+      tabIndex={-1}
       className="py-20 border-t border-border/40 relative overflow-hidden"
     >
       <div className="absolute bottom-0 left-0 w-[520px] h-[520px] bg-secondary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>

@@ -9,7 +9,7 @@ export function Footer() {
         <div className="text-center md:text-left">
           <p className="font-bold text-lg tracking-tight">{profile.name}</p>
           <p className="text-sm text-muted-foreground">
-            {profile.homepage.title}
+            {profile.transversePositioning}
           </p>
           <p className="text-xs text-muted-foreground mt-2">
             Copyright {new Date().getFullYear()} {profile.name}. Tous droits

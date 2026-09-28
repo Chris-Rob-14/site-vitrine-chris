@@ -1,12 +1,10 @@
+import { FacetsSection } from "./FacetsSection";
+import { ProofSection } from "./ProofSection";
+import { HomeDetailsSection } from "./HomeDetailsSection";
 import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
-import { AboutSection } from "./AboutSection";
 import { WorkApproachSection } from "./WorkApproachSection";
-import { ExperienceSection } from "./ExperienceSection";
-import { SkillsSection } from "./SkillsSection";
 import { ProjectSection } from "./ProjectSection";
-import { ThinkingCardsSection } from "./ThinkingCardsSection";
-import { OpportunitySection } from "./OpportunitySection";
 import { CtaSection } from "./CtaSection";
 import { Footer } from "./Footer";
 
@@ -23,13 +21,11 @@ export function ClassicView() {
       <main id="main-content" tabIndex={-1} className="flex-1">
         <div className="container mx-auto px-4">
           <HeroSection />
-          <AboutSection />
+          <FacetsSection />
+          <ProofSection />
           <WorkApproachSection />
-          <ExperienceSection />
-          <SkillsSection />
           <ProjectSection />
-          <ThinkingCardsSection />
-          <OpportunitySection />
+          <HomeDetailsSection />
         </div>
         <CtaSection />
       </main>

@@ -1,6 +1,13 @@
-export const navigation = [
-  { href: "#about", label: "À propos" },
-  { href: "#experience", label: "Expérience" },
-  { href: "#skills", label: "Compétences" },
-  { href: "#projects", label: "Projets" },
+export interface NavigationItem {
+  href: string;
+  label: string;
+}
+
+export const navigation: NavigationItem[] = [
+  { href: "/projet", label: "Projet & BA" },
+  { href: "#facets", label: "Mes facettes" },
+  { href: "#approach", label: "Ma démarche" },
+  { href: "#projects", label: "Réalisations" },
+  { href: "#parcours", label: "Parcours" },
+  { href: "#contact", label: "Contact" },
 ];

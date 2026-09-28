@@ -1,5 +1,5 @@
 import { profile } from "@/data/profile";
-import { Badge } from "@/components/ui/badge";
+import { home } from "@/data/homepage";
 import { buttonVariants } from "@/components/ui/button-variants";
 
 export function HeroSection() {
@@ -15,39 +15,27 @@ export function HeroSection() {
             {profile.lastName}
           </span>
         </h1>
-        <h2 className="text-2xl md:text-3xl font-sans font-medium text-foreground/80">
-          {profile.homepage.title}
-        </h2>
-        <div className="flex flex-wrap justify-center gap-2 pt-4">
-          {profile.homepage.badges.map((badge, index) => (
-            <Badge
-              key={badge}
-              variant="outline"
-              className={
-                index === 2
-                  ? "border-secondary/50 text-foreground bg-background hover:bg-secondary/10 transition-colors"
-                  : "border-primary/50 text-foreground bg-background hover:bg-primary/10 transition-colors"
-              }
-            >
-              {badge}
-            </Badge>
-          ))}
-        </div>
+        <p className="text-base md:text-xl font-medium text-foreground/80">
+          {profile.transversePositioning}
+        </p>
+        <p className="text-2xl md:text-4xl font-semibold tracking-tight pt-4">
+          {profile.tagline}
+        </p>
       </div>
 
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mt-4">
-        {profile.homepage.bio}
+        {home.introduction}
       </p>
 
       <div className="flex flex-wrap justify-center gap-4 pt-6">
         <a
-          href="#projects"
+          href="#facets"
           className={
             buttonVariants({ size: "lg" }) +
             " min-h-11 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--drop-shadow-glow-orange)]"
           }
         >
-          Découvrir mes projets
+          Découvrir mes facettes
         </a>
         <a
           href={profile.cv}
