@@ -13,18 +13,26 @@ import { Footer } from "./Footer";
 export function ClassicView() {
   return (
     <div className="min-h-screen bg-background relative flex flex-col">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-background focus:p-4 focus:text-foreground"
+      >
+        Aller au contenu
+      </a>
       <Header />
-      <main className="container mx-auto px-4 flex-1">
-        <HeroSection />
-        <AboutSection />
-        <WorkApproachSection />
-        <ExperienceSection />
-        <SkillsSection />
-        <ProjectSection />
-        <ThinkingCardsSection />
-        <OpportunitySection />
+      <main id="main-content" tabIndex={-1} className="flex-1">
+        <div className="container mx-auto px-4">
+          <HeroSection />
+          <AboutSection />
+          <WorkApproachSection />
+          <ExperienceSection />
+          <SkillsSection />
+          <ProjectSection />
+          <ThinkingCardsSection />
+          <OpportunitySection />
+        </div>
+        <CtaSection />
       </main>
-      <CtaSection />
       <Footer />
     </div>
   );

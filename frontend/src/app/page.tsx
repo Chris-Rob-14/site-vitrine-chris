@@ -1,5 +1,5 @@
-import { PortfolioSwitcher } from "@/components/PortfolioSwitcher";
+import { ClassicView } from "@/components/classic/ClassicView";
 
 export default function Home() {
-  return <PortfolioSwitcher />;
+  return <ClassicView />;
 }

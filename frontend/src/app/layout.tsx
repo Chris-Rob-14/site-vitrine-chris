@@ -1,3 +1,4 @@
+import { profile } from "@/data/profile";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
@@ -11,39 +12,39 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Christopher Robine | Analyste fonctionnel & Developpeur Full Stack",
-    template: "%s | Christopher Robine",
+    default: `${profile.name} | ${profile.homepage.title}`,
+    template: `%s | ${profile.name}`,
   },
   description:
-    "Portfolio de Christopher Robine, analyste fonctionnel et developpeur full stack, specialise dans la modernisation d'applications, le cadrage fonctionnel et le pilotage de projets digitaux.",
+    "Portfolio de Christopher Robine, analyste fonctionnel et développeur full stack, spécialisé dans la modernisation d'applications, le cadrage fonctionnel et le pilotage de projets digitaux.",
   applicationName: "Site vitrine Christopher Robine",
   keywords: [
     "Christopher Robine",
     "Analyste fonctionnel",
-    "Developpeur Full Stack",
+    "Développeur Full Stack",
     "Portfolio",
     "Architecture applicative",
     "Next.js",
   ],
-  authors: [{ name: "Christopher Robine" }],
-  creator: "Christopher Robine",
+  authors: [{ name: profile.name }],
+  creator: profile.name,
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Christopher Robine | Analyste fonctionnel & Developpeur Full Stack",
+    title: `${profile.name} | ${profile.homepage.title}`,
     description:
-      "Decouvrez le parcours, les projets et les expertises de Christopher Robine en analyse fonctionnelle, modernisation applicative et delivery produit.",
+      "Découvrez le parcours, les projets et les expertises de Christopher Robine en analyse fonctionnelle, modernisation applicative et delivery produit.",
     type: "website",
     locale: "fr_FR",
   },
   twitter: {
     card: "summary",
-    title: "Christopher Robine | Analyste fonctionnel & Developpeur Full Stack",
+    title: `${profile.name} | ${profile.homepage.title}`,
     description:
-      "Portfolio de Christopher Robine, specialise en analyse fonctionnelle, modernisation d'applications et pilotage technique.",
+      "Portfolio de Christopher Robine, spécialisé en analyse fonctionnelle, modernisation d'applications et pilotage technique.",
   },
 };
 

@@ -1,57 +1,68 @@
-import { buttonVariants } from "@/components/ui/button";
-import { ArrowRight, Calendar, Sparkles } from "lucide-react";
+import { profile } from "@/data/profile";
+import { contact, homepageStats } from "@/data/homepage";
+import { buttonVariants } from "@/components/ui/button-variants";
+import { ArrowRight, Mail, Sparkles } from "lucide-react";
 
 export function CtaSection() {
   return (
-    <section id="contact" className="py-24 border-t border-border/40 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 border-t border-border/40 relative overflow-hidden"
+    >
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto px-4 text-center space-y-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <div className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
-            <p className="text-4xl font-black text-primary mb-2">4</p>
-            <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Ans d'experience</p>
-          </div>
-          <div className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
-            <p className="text-4xl font-black text-secondary mb-2">10</p>
-            <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Projets livres</p>
-          </div>
-          <div className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
-            <p className="text-4xl font-black text-purple-500 mb-2">100%</p>
-            <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Focus besoin</p>
-          </div>
-          <div className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
-            <p className="text-4xl font-black text-blue-500 mb-2">{"\u221E"}</p>
-            <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Lignes de code</p>
-          </div>
+          {homepageStats.map((stat, index) => (
+            <div
+              key={stat.id}
+              className="p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm"
+            >
+              <p
+                className={`text-4xl font-black mb-2 ${["text-primary", "text-secondary", "text-purple-500", "text-blue-500"][index]}`}
+              >
+                {stat.value}
+              </p>
+              <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-8 p-10 rounded-3xl border border-primary/20 bg-primary/5 backdrop-blur-md relative">
+        <div className="max-w-3xl mx-auto space-y-8 p-5 sm:p-10 rounded-3xl border border-primary/20 bg-primary/5 backdrop-blur-md relative">
           <Sparkles className="absolute top-6 left-6 w-6 h-6 text-primary/40 animate-pulse" />
           <Sparkles className="absolute bottom-6 right-6 w-8 h-8 text-secondary/40 animate-pulse delay-700" />
 
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Pret a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">collaborer ?</span>
+            Prêt à{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              collaborer ?
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Si vous avez besoin de clarifier un sujet, cadrer un projet, prioriser des evolutions ou
-            transformer un besoin metier en plan d'action concret, je serai ravi d'en discuter avec vous.
-          </p>
+          <p className="text-xl text-muted-foreground">{contact}</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
             <a
-              href="mailto:christopher.robine@gmail.com"
-              className={buttonVariants({ size: "lg" }) + " h-14 px-8 text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_rgba(255,94,0,0.4)] hover:shadow-[0_0_30px_rgba(255,94,0,0.6)] transition-all"}
+              href={`mailto:${profile.email}`}
+              className={
+                buttonVariants({ size: "lg" }) +
+                " min-h-14 h-auto whitespace-normal px-4 sm:px-8 text-base sm:text-lg font-bold bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_rgba(255,94,0,0.4)] hover:shadow-[0_0_30px_rgba(255,94,0,0.6)] transition-all"
+              }
             >
-              <Calendar className="w-5 h-5 mr-2" />
-              Prendre Rendez-vous
+              <Mail className="w-5 h-5 mr-2" />
+              M’écrire par e-mail
             </a>
 
             <a
-              href="https://www.linkedin.com/in/christopher-robine-767981134/"
+              href={profile.linkedin}
               target="_blank"
+              aria-label="Me contacter sur LinkedIn (nouvel onglet)"
               rel="noreferrer"
-              className={buttonVariants({ size: "lg", variant: "outline" }) + " h-14 px-8 text-lg font-bold border-border hover:border-primary/50 hover:bg-primary/10 transition-all text-foreground"}
+              className={
+                buttonVariants({ size: "lg", variant: "outline" }) +
+                " min-h-14 h-auto whitespace-normal px-4 sm:px-8 text-base sm:text-lg font-bold border-border hover:border-primary/50 hover:bg-primary/10 transition-all text-foreground"
+              }
             >
               Me contacter sur LinkedIn
               <ArrowRight className="w-5 h-5 ml-2" />
