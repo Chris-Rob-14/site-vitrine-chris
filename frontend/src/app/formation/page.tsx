@@ -6,7 +6,7 @@ import { Footer } from "@/components/classic/Footer";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { profile } from "@/data/profile";
 import { training } from "@/data/training";
-import { trainingNavigation, trainingPage as content } from "@/data/trainingPage";
+import { trainingPage as content } from "@/data/trainingPage";
 
 export const metadata: Metadata = {
   title: content.metadataTitle,
@@ -21,7 +21,7 @@ export default function TrainingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-background focus:p-4">Aller au contenu</a>
-      <Header items={trainingNavigation} currentHref="/formation" />
+      <Header currentHref="/formation" />
       <main id="main-content" tabIndex={-1} className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <section className="py-16 md:py-24 space-y-6 max-w-4xl">
@@ -109,6 +109,7 @@ export default function TrainingPage() {
               <a href={`mailto:${profile.email}`} className={buttonVariants({ size: "lg" }) + " min-h-11 h-auto whitespace-normal"}><Mail aria-hidden="true" />{content.emailLabel}</a>
               <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label={`${content.linkedinLabel} (nouvel onglet)`} className={buttonVariants({ size: "lg", variant: "outline" }) + " min-h-11 h-auto whitespace-normal"}>{content.linkedinLabel}<ArrowRight aria-hidden="true" /></a>
             </div>
+            <Link href="/contact" className="inline-flex min-h-11 items-center text-primary underline underline-offset-4">{content.contactLink}</Link>
           </section>
         </div>
       </main>

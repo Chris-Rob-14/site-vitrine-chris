@@ -4,6 +4,8 @@ import { reflections } from "./reflections";
 import { pillars } from "./workApproach";
 
 export const projectPage = {
+  realisationsLink: "Voir les réalisations et leurs contributions",
+  contactLink: "Tous les moyens de contact",
   title: "Projet & Business Analysis",
   subtitle: "Du besoin métier à la mise en production",
   introduction: "Faire le lien entre les utilisateurs, les contraintes métier et les équipes techniques : j'associe analyse fonctionnelle, chiffrage et coordination à une expérience concrète du développement d'applications métier.",
@@ -51,12 +53,3 @@ export const projectEvidence = projects.filter(project =>
 export const projectExperience = experiences.find(experience => experience.id === "ca-neops-it");
 export const projectApproach = pillars;
 export const projectReflection = reflections.find(reflection => reflection.number === 10);
-
-export const projectNavigation = [
-  { href: "/", label: "Accueil" },
-  { href: "/projet", label: "Projet & BA" },
-  { href: "/formation", label: "Formation" },
-  { href: "#cycle", label: "Démarche" },
-  { href: "#preuves", label: "Contributions" },
-  { href: "#contact", label: "Contact" },
-];

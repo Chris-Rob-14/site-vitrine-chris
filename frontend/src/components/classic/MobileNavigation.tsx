@@ -1,10 +1,10 @@
 "use client";
 import { useRef } from "react";
 import { Menu } from "lucide-react";
-import { navigation, type NavigationItem } from "@/data/navigation";
+import { navigation } from "@/data/navigation";
 import Link from "next/link";
 
-export function MobileNavigation({ items = navigation, currentHref }: { items?: NavigationItem[]; currentHref?: string }) {
+export function MobileNavigation({ currentHref }: { currentHref?: string }) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const summaryRef = useRef<HTMLElement>(null);
   return (
@@ -29,7 +29,7 @@ export function MobileNavigation({ items = navigation, currentHref }: { items?: 
         aria-label="Navigation mobile"
         className="absolute inset-x-0 top-full border-b border-border bg-background p-4 shadow-lg"
       >
-        {items.map((item) => (
+        {navigation.map((item) => (
           <Link
             key={item.href}
             href={item.href}

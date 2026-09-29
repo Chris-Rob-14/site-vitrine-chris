@@ -6,7 +6,7 @@ import { Footer } from "@/components/classic/Footer";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { profile } from "@/data/profile";
 import { skillCategories } from "@/data/skills";
-import { interventionSteps, projectApproach, projectEvidence, projectExperience, projectNavigation, projectPage, projectPractices, projectReflection } from "@/data/projectPage";
+import { interventionSteps, projectApproach, projectEvidence, projectExperience, projectPage, projectPractices, projectReflection } from "@/data/projectPage";
 
 export const metadata: Metadata = {
   title: projectPage.title,
@@ -21,7 +21,7 @@ export default function ProjectPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-background focus:p-4">Aller au contenu</a>
-      <Header items={projectNavigation} currentHref="/projet" />
+      <Header currentHref="/projet" />
       <main id="main-content" tabIndex={-1} className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <section className="py-16 md:py-24 space-y-7 max-w-4xl">
@@ -57,6 +57,7 @@ export default function ProjectPage() {
           <section id="preuves" tabIndex={-1} aria-labelledby="evidence-title" className={sectionClass}>
             <h2 id="evidence-title" className={headingClass}>{projectPage.evidenceTitle}</h2>
             <p className="max-w-3xl text-muted-foreground leading-relaxed">{projectPage.evidenceIntroduction}</p>
+            <Link href="/realisations" className="inline-flex min-h-11 items-center text-primary underline underline-offset-4">{projectPage.realisationsLink}</Link>
             {projectExperience && <article className={cardClass}>
               <p className="text-primary font-medium">{projectExperience.company} · {projectExperience.date}</p>
               <h3 className="text-2xl font-bold">{projectExperience.role}</h3>
@@ -103,6 +104,7 @@ export default function ProjectPage() {
               <a href={`mailto:${profile.email}`} className={buttonVariants({size: "lg"}) + " min-h-11 h-auto whitespace-normal"}><Mail aria-hidden="true" />{projectPage.emailLabel}</a>
               <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label={`${projectPage.linkedinLabel} (nouvel onglet)`} className={buttonVariants({size: "lg", variant: "outline"}) + " min-h-11 h-auto whitespace-normal"}>{projectPage.linkedinLabel}<ArrowRight aria-hidden="true" /></a>
             </div>
+            <Link href="/contact" className="inline-flex min-h-11 items-center text-primary underline underline-offset-4">{projectPage.contactLink}</Link>
           </section>
         </div>
       </main>

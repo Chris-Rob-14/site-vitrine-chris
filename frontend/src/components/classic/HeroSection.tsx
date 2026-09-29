@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { profile } from "@/data/profile";
 import { home } from "@/data/homepage";
 import { buttonVariants } from "@/components/ui/button-variants";
@@ -47,15 +48,15 @@ export function HeroSection() {
         >
           Télécharger mon CV
         </a>
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className={
             buttonVariants({ size: "lg", variant: "outline" }) +
             " min-h-11 border-border hover:bg-muted text-foreground"
           }
         >
           Me contacter
-        </a>
+        </Link>
       </div>
     </section>
   );

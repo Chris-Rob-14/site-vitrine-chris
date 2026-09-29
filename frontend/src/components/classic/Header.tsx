@@ -1,10 +1,10 @@
 import { Logo } from "@/components/ui/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { navigation, type NavigationItem } from "@/data/navigation";
+import { navigation } from "@/data/navigation";
 import Link from "next/link";
 import { MobileNavigation } from "./MobileNavigation";
 
-export function Header({ items = navigation, currentHref }: { items?: NavigationItem[]; currentHref?: string }) {
+export function Header({ currentHref }: { currentHref?: string }) {
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-background/80 border-b border-border/40">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-2">
@@ -14,7 +14,7 @@ export function Header({ items = navigation, currentHref }: { items?: Navigation
             aria-label="Navigation principale"
             className="hidden lg:flex items-center gap-6 text-sm font-medium text-muted-foreground"
           >
-            {items.map((item) => (
+            {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -25,7 +25,7 @@ export function Header({ items = navigation, currentHref }: { items?: Navigation
               </Link>
             ))}
           </nav>
-          <MobileNavigation items={items} currentHref={currentHref} />
+          <MobileNavigation currentHref={currentHref} />
           <ThemeToggle />
         </div>
       </div>

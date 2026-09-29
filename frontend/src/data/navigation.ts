@@ -4,11 +4,10 @@ export interface NavigationItem {
 }
 
 export const navigation: NavigationItem[] = [
-  { href: "/projet", label: "Projet & BA" },
+  { href: "/", label: "Accueil" },
+  { href: "/projet", label: "Projet" },
   { href: "/formation", label: "Formation" },
-  { href: "#facets", label: "Mes facettes" },
-  { href: "#approach", label: "Ma démarche" },
-  { href: "#projects", label: "Réalisations" },
-  { href: "#parcours", label: "Parcours" },
-  { href: "#contact", label: "Contact" },
+  { href: "/realisations", label: "Réalisations" },
+  { href: "/a-propos", label: "À propos" },
+  { href: "/contact", label: "Contact" },
 ];

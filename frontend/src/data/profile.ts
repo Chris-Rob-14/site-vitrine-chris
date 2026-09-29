@@ -24,7 +24,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/christopher-robine-767981134/",
   cv: "/cv-christopher-robine.pdf",
   education: {
-    title: "Master / Bac+5 Gestion de Projet Web & Digital",
+    title: "Gestion de Projet Web & Digital",
     school: "MyDigitalSchool",
     certification: "RNCP niveau 7",
   },

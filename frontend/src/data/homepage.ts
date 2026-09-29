@@ -32,6 +32,8 @@ export const homeFacets = [
   },
   {
     id: "development",
+    href: "/realisations",
+    linkLabel: "Explorer cette facette",
     title: "Développement & réalisations",
     description: "M'appuyer sur une culture Web et full-stack pour comprendre les contraintes techniques, dialoguer avec les développeurs, prototyper et réaliser des solutions adaptées au besoin.",
   },

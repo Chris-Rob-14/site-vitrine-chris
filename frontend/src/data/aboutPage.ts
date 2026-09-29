@@ -1,0 +1,23 @@
+export const aboutPage = {
+  title: "À propos",
+  description: "Le parcours de Christopher Robine, de la production bancaire à l'analyse fonctionnelle et au développement full-stack, avec un intérêt pour le pilotage et la transmission.",
+  subtitle: "Un parcours entre métier, projet et technique",
+  introduction: "Mon parcours a commencé dans le back-office bancaire avant de se poursuivre dans l'analyse fonctionnelle et le développement d'applications métier. Ce passage du traitement des opérations à la construction des outils explique mon attention aux usages, aux règles métier et aux contraintes de réalisation.",
+  currentLabel: "Mon rôle actuel",
+  evolutionTitle: "Du fonctionnement métier aux solutions numériques",
+  evolutionDescription: "L'expérience de la production bancaire et celle du développement se complètent : comprendre ce que les équipes doivent accomplir, puis traduire leurs besoins en solutions exploitables. Je souhaite aujourd'hui donner davantage de place au pilotage, à la Business Analysis et à la transmission, en m'appuyant sur cette double culture.",
+  educationTitle: "Une formation en gestion de projet numérique",
+  locationTitle: "Mon ancrage professionnel",
+  approachTitle: "Comprendre, rendre les choix lisibles, rester concret",
+  approachDescription: "Je cherche d'abord à comprendre le problème et les contraintes du terrain. Le dialogue métier/technique permet ensuite de rendre les options et leurs conséquences compréhensibles. L'objectif reste une solution utile, avec un effort proportionné au besoin plutôt qu'une complexité ajoutée par principe.",
+  transmissionTitle: "L'envie de transmettre ces pratiques",
+  transmissionDescription: "Je souhaite rendre plus accessibles le fonctionnement du Web et les étapes d'un projet numérique, à partir de situations professionnelles concrètes. Cette activité est en préparation : il s'agit d'une direction que je développe, pas d'une expérience d'enseignement déjà acquise.",
+  transmissionStatus: "Activité de transmission en préparation",
+  facetsTitle: "Explorer les différentes facettes",
+  facets: [
+    { href: "/projet", title: "Projet & Business Analysis", description: "Ma démarche pour comprendre, cadrer et coordonner." },
+    { href: "/formation", title: "Formation & transmission", description: "Les interventions envisagées et les publics concernés." },
+    { href: "/realisations", title: "Développement & réalisations", description: "Les contributions concrètes aux solutions et aux outils." },
+  ],
+  contactLabel: "Échangeons sur votre contexte",
+};

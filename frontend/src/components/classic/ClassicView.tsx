@@ -17,7 +17,7 @@ export function ClassicView() {
       >
         Aller au contenu
       </a>
-      <Header />
+      <Header currentHref="/" />
       <main id="main-content" tabIndex={-1} className="flex-1">
         <div className="container mx-auto px-4">
           <HeroSection />

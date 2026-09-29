@@ -1,4 +1,5 @@
 export const trainingPage = {
+  contactLink: "Tous les moyens de contact",
   title: "Formation & transmission",
   subtitle: "Transmettre des pratiques numériques ancrées dans le terrain",
   metadataTitle: "Formation & transmission numérique",
@@ -32,11 +33,3 @@ export const trainingPage = {
   emailLabel: "M'écrire par e-mail",
   linkedinLabel: "Échanger sur LinkedIn",
 };
-
-export const trainingNavigation = [
-  { href: "/", label: "Accueil" },
-  { href: "/projet", label: "Projet & BA" },
-  { href: "/formation", label: "Formation" },
-  { href: "#domaines", label: "Domaines" },
-  { href: "#contact", label: "Contact" },
-];
