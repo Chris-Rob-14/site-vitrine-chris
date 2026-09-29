@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { projects } from "@/data/projects";
-import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { projectCategoryLabels } from "@/data/realisationsPage";
+import { buttonVariants } from "@/components/ui/button-variants";
+
+const selectedProjectIds = ["chiffrage-priorisation", "site-vitrine", "refonte-intranet"];
+const homeProjects = projects.filter(project => selectedProjectIds.includes(project.id));
 
 export function ProjectSection() {
   return (
@@ -11,48 +16,40 @@ export function ProjectSection() {
     >
       <div className="max-w-6xl mx-auto space-y-12">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center">
-          Projets <span className="text-primary">Majeurs</span>
+          Quelques <span className="text-primary">réalisations</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {homeProjects.map((project) => (
+            <article
               key={project.id}
-              className="group relative rounded-2xl border border-border bg-card hover:border-primary/50 overflow-hidden transition-all hover:translate-y-[-4px] hover:shadow-[0_8px_30px_rgba(255,94,0,0.15)] flex flex-col"
+              className="group min-w-0 rounded-2xl border border-border bg-card flex flex-col"
             >
-              {project.image && (
-                <div className="relative h-48 w-full overflow-hidden -mb-[1px] z-10">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(min-width: 1280px) 560px, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-                </div>
-              )}
-
-              <div className="p-8 flex-1 flex flex-col">
+              <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
                   <Link href={`/realisations#${project.slug}`} data-analytics-project={project.id}>{project.title}</Link>
                 </h3>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, i) => (
+                  {project.categories.slice(0, 2).map((category) => (
                     <span
-                      key={i}
-                      className="text-xs font-mono px-2 py-1 bg-muted text-muted-foreground rounded-md border border-border/50"
+                      key={category}
+                      className="text-sm px-3 py-1 bg-primary/5 text-primary rounded-full border border-primary/30"
                     >
-                      {tag}
+                      {projectCategoryLabels[category]}
                     </span>
                   ))}
                 </div>
                 <p className="text-muted-foreground leading-relaxed flex-1">
-                  {project.summary}
+                  {project.summary.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() ?? project.summary}
                 </p>
               </div>
-            </div>
+            </article>
           ))}
+        </div>
+        <div className="text-center">
+          <Link href="/realisations" className={buttonVariants({ variant: "outline", size: "lg" }) + " h-auto min-h-11 whitespace-normal"}>
+            Voir toutes mes réalisations <ArrowRight aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>

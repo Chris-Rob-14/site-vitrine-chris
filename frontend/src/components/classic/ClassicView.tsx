@@ -1,6 +1,5 @@
 import { FacetsSection } from "./FacetsSection";
 import { ProofSection } from "./ProofSection";
-import { HomeDetailsSection } from "./HomeDetailsSection";
 import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
 import { WorkApproachSection } from "./WorkApproachSection";
@@ -25,7 +24,6 @@ export function ClassicView() {
           <ProofSection />
           <WorkApproachSection />
           <ProjectSection />
-          <HomeDetailsSection />
         </div>
         <CtaSection />
       </main>
