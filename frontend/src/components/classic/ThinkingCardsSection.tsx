@@ -55,7 +55,7 @@ export function ThinkingCardsSection() {
                     src={card.image}
                     alt={card.title}
                     fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    sizes="(min-width: 1280px) 560px, (min-width: 1024px) 50vw, 100vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent"></div>

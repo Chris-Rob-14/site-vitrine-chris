@@ -21,7 +21,7 @@ export function FacetsSection() {
                 <Icon aria-hidden="true" className="h-7 w-7 text-primary" />
                 <h3 className="text-2xl font-bold tracking-tight">{facet.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{facet.description}</p>
-                {facet.href && <Link href={facet.href} className="inline-flex min-h-11 items-center text-primary font-medium underline underline-offset-4">{facet.linkLabel}<span className="sr-only"> : {facet.title}</span></Link>}
+                {facet.href && <Link data-analytics-facet={facet.id} href={facet.href} className="inline-flex min-h-11 items-center text-primary font-medium underline underline-offset-4">{facet.linkLabel}<span className="sr-only"> : {facet.title}</span></Link>}
                 {facet.id === "training" && training.status === "planned" && <p className="text-sm text-muted-foreground border-t border-border/50 pt-4">{home.trainingStatus}</p>}
               </article>
             );

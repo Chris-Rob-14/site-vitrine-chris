@@ -1,3 +1,9 @@
+import { Suspense } from "react";
+import { home } from "@/data/homepage";
+import { siteUrl } from "@/lib/site";
+import { pageMetadata } from "@/lib/metadata";
+import { JsonLd } from "@/components/JsonLd";
+import { personSchema } from "@/lib/structured-data";
 import { profile } from "@/data/profile";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
@@ -11,41 +17,14 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: `${profile.name} | ${profile.homepage.title}`,
-    template: `%s | ${profile.name}`,
-  },
-  description:
-    "Portfolio de Christopher Robine, analyste fonctionnel et développeur full stack, spécialisé dans la modernisation d'applications, le cadrage fonctionnel et le pilotage de projets digitaux.",
-  applicationName: "Site vitrine Christopher Robine",
-  keywords: [
-    "Christopher Robine",
-    "Analyste fonctionnel",
-    "Développeur Full Stack",
-    "Portfolio",
-    "Architecture applicative",
-    "Next.js",
-  ],
+  ...pageMetadata("/", home.metadataTitle, home.metadataDescription, true),
+  metadataBase: new URL(siteUrl),
+  title: { default: home.metadataTitle, template: `%s | ${profile.name}` },
+  applicationName: profile.name,
   authors: [{ name: profile.name }],
   creator: profile.name,
-  icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
-  },
-  openGraph: {
-    title: `${profile.name} | ${profile.homepage.title}`,
-    description:
-      "Découvrez le parcours, les projets et les expertises de Christopher Robine en analyse fonctionnelle, modernisation applicative et delivery produit.",
-    type: "website",
-    locale: "fr_FR",
-  },
-  twitter: {
-    card: "summary",
-    title: `${profile.name} | ${profile.homepage.title}`,
-    description:
-      "Portfolio de Christopher Robine, spécialisé en analyse fonctionnelle, modernisation d'applications et pilotage technique.",
-  },
+  robots: { index: true, follow: true },
+  icons: { icon: "/icon.svg", shortcut: "/icon.svg", apple: "/icon.svg" },
 };
 
 export default function RootLayout({
@@ -64,7 +43,8 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        <GoogleAnalytics />
+        <JsonLd data={personSchema} />
+        <Suspense fallback={null}><GoogleAnalytics /></Suspense>
       </body>
     </html>
   );

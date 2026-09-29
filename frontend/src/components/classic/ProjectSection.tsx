@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { projects } from "@/data/projects";
 import Image from "next/image";
 
@@ -25,7 +26,7 @@ export function ProjectSection() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1280px) 560px, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
@@ -34,7 +35,7 @@ export function ProjectSection() {
 
               <div className="p-8 flex-1 flex flex-col">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
+                  <Link href={`/realisations#${project.slug}`} data-analytics-project={project.id}>{project.title}</Link>
                 </h3>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, i) => (

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 import { Header } from "@/components/classic/Header";
@@ -9,10 +9,7 @@ import { projects } from "@/data/projects";
 import { profile } from "@/data/profile";
 import { realisationsPage as content } from "@/data/realisationsPage";
 
-export const metadata: Metadata = {
-  title: content.metadataTitle,
-  description: content.description,
-};
+export const metadata = pageMetadata("/realisations", content.metadataTitle, content.description);
 
 const headingClass = "text-3xl md:text-5xl font-bold tracking-tight";
 

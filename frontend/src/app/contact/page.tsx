@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowRight, Linkedin, Mail } from "lucide-react";
 import { Header } from "@/components/classic/Header";
@@ -6,10 +6,7 @@ import { Footer } from "@/components/classic/Footer";
 import { profile } from "@/data/profile";
 import { contactPage as content } from "@/data/contactPage";
 
-export const metadata: Metadata = {
-  title: content.title,
-  description: content.description,
-};
+export const metadata = pageMetadata("/contact", content.title, content.description);
 
 export default function ContactPage() {
   return (

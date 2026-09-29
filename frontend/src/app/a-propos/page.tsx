@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { profilePageSchema } from "@/lib/structured-data";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/classic/Header";
@@ -10,10 +12,7 @@ import { experiences } from "@/data/experiences";
 import { pillars } from "@/data/workApproach";
 import { training } from "@/data/training";
 
-export const metadata: Metadata = {
-  title: content.title,
-  description: content.description,
-};
+export const metadata = pageMetadata("/a-propos", content.title, content.description);
 
 const currentExperience = experiences.find(experience => experience.id === "ca-neops-it");
 const headingClass = "text-3xl md:text-5xl font-bold tracking-tight";
@@ -23,6 +22,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-background focus:p-4">Aller au contenu</a>
+      <JsonLd data={profilePageSchema} />
       <Header currentHref="/a-propos" />
       <main id="main-content" tabIndex={-1} className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">

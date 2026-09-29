@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 import { Header } from "@/components/classic/Header";
@@ -8,10 +8,7 @@ import { profile } from "@/data/profile";
 import { training } from "@/data/training";
 import { trainingPage as content } from "@/data/trainingPage";
 
-export const metadata: Metadata = {
-  title: content.metadataTitle,
-  description: content.description,
-};
+export const metadata = pageMetadata("/formation", content.metadataTitle, content.description);
 
 const sectionClass = "py-16 md:py-20 border-t border-border/40 space-y-8";
 const headingClass = "text-3xl md:text-5xl font-bold tracking-tight";
@@ -31,7 +28,7 @@ export default function TrainingPage() {
             <p className="text-2xl md:text-3xl font-semibold">{content.subtitle}</p>
             {training.status === "planned" && <p className="inline-block rounded-xl border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium">{content.statusLabel}</p>}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{content.introduction}</p>
-            <a href="#contact" className={buttonVariants({ size: "lg" }) + " min-h-11 h-auto whitespace-normal"}>{training.cta}<ArrowRight aria-hidden="true" /></a>
+            <a data-analytics-training-cta="true" href="#contact" className={buttonVariants({ size: "lg" }) + " min-h-11 h-auto whitespace-normal"}>{training.cta}<ArrowRight aria-hidden="true" /></a>
           </section>
 
           <section aria-labelledby="audience-title" className={sectionClass}>
@@ -106,8 +103,8 @@ export default function TrainingPage() {
             <h2 id="contact-title" className={headingClass}>{content.ctaTitle}</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">{content.ctaDescription}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={`mailto:${profile.email}`} className={buttonVariants({ size: "lg" }) + " min-h-11 h-auto whitespace-normal"}><Mail aria-hidden="true" />{content.emailLabel}</a>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label={`${content.linkedinLabel} (nouvel onglet)`} className={buttonVariants({ size: "lg", variant: "outline" }) + " min-h-11 h-auto whitespace-normal"}>{content.linkedinLabel}<ArrowRight aria-hidden="true" /></a>
+              <a data-analytics-training-cta="true" href={`mailto:${profile.email}`} className={buttonVariants({ size: "lg" }) + " min-h-11 h-auto whitespace-normal"}><Mail aria-hidden="true" />{content.emailLabel}</a>
+              <a data-analytics-training-cta="true" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label={`${content.linkedinLabel} (nouvel onglet)`} className={buttonVariants({ size: "lg", variant: "outline" }) + " min-h-11 h-auto whitespace-normal"}>{content.linkedinLabel}<ArrowRight aria-hidden="true" /></a>
             </div>
             <Link href="/contact" className="inline-flex min-h-11 items-center text-primary underline underline-offset-4">{content.contactLink}</Link>
           </section>

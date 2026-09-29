@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 import { Header } from "@/components/classic/Header";
@@ -8,10 +8,7 @@ import { profile } from "@/data/profile";
 import { skillCategories } from "@/data/skills";
 import { interventionSteps, projectApproach, projectEvidence, projectExperience, projectPage, projectPractices, projectReflection } from "@/data/projectPage";
 
-export const metadata: Metadata = {
-  title: projectPage.title,
-  description: projectPage.description,
-};
+export const metadata = pageMetadata("/projet", projectPage.title, projectPage.description);
 
 const sectionClass = "py-16 md:py-20 border-t border-border/40 space-y-10";
 const headingClass = "text-3xl md:text-5xl font-bold tracking-tight";
